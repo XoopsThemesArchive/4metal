@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<!-- 4theMetal by www.4thefort.com -->
+</head>
+<body>
+<div align="center"><center>
+
+<table border="0" width="95%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="344"><a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>logo.jpg"></a></td>
+    <td width="65"><img src="<{$xoops_imageurl}>slope.jpg"></td>
+    <td width="100%" background="<{$xoops_imageurl}>topbg.jpg"></td>
+  </tr>
+</table>
+</center></div>
+<div align="center"><center>
+
+<table border="0" width="95%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="344" background="<{$xoops_imageurl}>underlogo1bg.jpg"><img src="tranparent.jpg" width="344" height="1"></td>
+    <td width="51"><img src="<{$xoops_imageurl}>underlogoslope.jpg" width="51" height="12"></td>
+    <td width="100%" background="<{$xoops_imageurl}>lightbg.jpg"></td>
+  </tr>
+</table>
+</center></div>
+<div align="center"><center>
+<table border="0" width="95%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="100%"><{$xoops_banner}></td>
+  </tr>
+</table></center></div>
+<div align="center"><center>
+
+<table border="0" width="95%" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tr>
+    <td id="navbarlink" width="20%" valign="middle"><a href="<{$xoops_url}>/register.php">Join <{$xoops_sitename}></a></td>
+    <td id="navbarlink" width="20%" valign="middle"><a href="<{$xoops_url}>/modules/xoopsfaq/">-= FAQ/Help =-</a></td>
+    <td id="navbarlink" width="20%" valign="middle"><a href="<{$xoops_url}>/">-= Home =-</td>
+    <td id="navbarlink" width="20%" valign="middle"><a href="<{$xoops_url}>/modules/newbb">-= Forums =-</a></td>
+    <td id="navbarlink" width="20%" valign="middle"><a href="<{$xoops_url}>/modules/contact/">-= Contact Us =-</a></td>
+  </tr>
+</table>
+</center></div>
+<div align="center">
+  <table cellspacing="0" width="95%" background="<{$xoops_imageurl}>lightbg.jpg">
+    <tr>
+      <td id="leftcolumn">
+        <!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="4metal/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+
+      </td>
+
+      <td id="centercolumn">
+
+        <!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="4metal/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="4metal/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="4metal/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+      </td>
+
+      <{if $xoops_showrblock == 1}>
+
+      <td id="rightcolumn">
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="4metal/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+      </td>
+
+      <{/if}>
+
+    </tr>
+  </table>
+  <br>
+  <div align="center"><center>
+
+<table border="0" width="95%" cellspacing="0" cellpadding="0" style="border-top: 1px solid rgb(0,0,0); border-bottom: 1px solid rgb(93,105,93)">
+  <tr>
+    <td id="thefort" width="10%" background="<{$xoops_imageurl}>lightbg.jpg" valign="middle"><p align="center"><small><a href="http://www.xoops.org/">Xoops<br>Powered</a></small></td>
+    <td id="footerbar" width="80%"  background="<{$xoops_imageurl}>lightbg.jpg"><p align="center">Copyright: <{$xoops_meta_copyright}> By <{$xoops_sitename}><br>All trademarks used are properties of their respective owners. All rights reserved.</td>
+    <td id="thefort" width="10%" background="<{$xoops_imageurl}>heavybg"><p align="center"><small><a href="http://www.4thefort.com/">Themes By<br>4thefort</a></small></td>
+  </tr>
+</table>
+</center></div>
+<br>
+</body>
+</html>
